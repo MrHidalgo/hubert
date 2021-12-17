@@ -1,0 +1,14 @@
+// COMMON :: START
+
+.copyright {
+	display: flex;
+	justify-content: flex-end;
+
+	&__text {
+		font-size: 15px;
+		letter-spacing: 0.02em;
+		color: #fff;
+	}
+}
+
+// COMMON :: END
