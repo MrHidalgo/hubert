@@ -1,19 +1,19 @@
 'use strict';
 
-const { task, series } = require('gulp');
+const { task, series, parallel } = require('gulp');
 
 
 const watchCB = (cb) => {
-  return series(
+  return parallel(
     'vendorScript:watch',
     'vendorStyle:watch',
     'iconfont:watch',
     'fonts:watch',
-    'spriteSVG:watch',
+    // 'spriteSVG:watch',
     'scss:watch',
     'js:watch',
     'pug:watch',
-    'list-pages:watch'
+    // 'list-pages:watch'
   )(cb);
 };
 

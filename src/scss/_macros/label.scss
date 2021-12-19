@@ -6,6 +6,9 @@
 	text-align: center;
 	color: #1d1f22;
 	text-transform: uppercase;
+	@include adaptive(767) {
+		font-size: 14px;
+	}
 }
 
 // LABEL :: END

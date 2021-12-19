@@ -1,14 +1,10 @@
 'use strict';
 
-const { task, series } = require('gulp');
+const { task, parallel } = require('gulp');
 
 
 const defaultCB = (cb) => {
-  return series(
-    'build',
-    'watch',
-    'server'
-  )(cb);
+  return parallel('build', 'watch', 'server')(cb);
 };
 
 
