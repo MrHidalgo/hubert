@@ -1,12 +1,51 @@
 // TITLE :: START
 
 .c-title {
-  &__text {
-    &-wrap {}
+  font-family: "IvyPresto Display", 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #602b51;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  @include adaptive(1279) {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  @include adaptive(767) {
+    font-size: 40px;
+    line-height: 60px;
   }
 
-  &__icon {
-    &-wrap {}
+  &--small {
+    font-size: 45px;
+    line-height: 55px;
+    @include adaptive(767) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
+
+  &--big {
+    font-size: 80px;
+    line-height: 100px;
+    @include adaptive(1439) {
+      font-size: 65px;
+      line-height: 85px;
+    }
+    @include adaptive(1279) {
+      font-size: 50px;
+      line-height: 70px;
+    }
+    @include adaptive(767) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  &--gold {
+    color: #e2c88e;
   }
 }
 

@@ -1,0 +1,163 @@
+// SECTION :: START
+
+.media {
+	padding-top: 90px;
+	padding-bottom: 70px;
+	@include adaptive(767) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	&__label {
+		padding-bottom: 90px;
+		@include adaptive(767) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__box {
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 415px;
+		@include adaptive(1279) {
+			height: 315px;
+		}
+		@include adaptive(1023) {
+			height: 185px;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+				@include transition(transform 0.45s);
+			}
+
+			span {
+				transform: scale(0.8);
+				@include transition(transform 0.45s);
+			}
+		}
+
+		&.media__box--small {
+			height: 215px;
+			@include adaptive(1279) {
+				height: 185px;
+			}
+
+			span {
+				width: 78px;
+				height: 78px;
+				@include adaptive(1279) {
+					width: 70px;
+					height: 70px;
+				}
+
+				.icon-font {
+					font-size: 30px;
+				}
+			}
+		}
+
+		&-wrapper {
+			position: relative;
+			left: -30px;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			width: calc(100% + 30px);
+			@include adaptive(767) {
+				left: 0;
+				width: 100%;
+			}
+
+			> div {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+				padding-left: 30px;
+				@include adaptive(767) {
+					width: 100%;
+					flex: 100%;
+					padding-left: 0;
+					padding-bottom: 30px;
+				}
+
+				&:first-of-type,
+				&:last-of-type {
+					max-width: 330px;
+					@include adaptive(1279) {
+						max-width: 300px;
+					}
+					@include adaptive(1023) {
+						flex: 1;
+						min-width: 1px;
+						max-width: 100%;
+					}
+				}
+			}
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			transform-origin: center;
+			@include transition(transform 0.4s);
+		}
+
+		span {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			background-color: rgba(#602b51, 0.8);
+			transform-origin: center;
+			@include transition(transform 0.4s);
+			@include adaptive(1279) {
+				width: 100px;
+				height: 100px;
+			}
+			@include adaptive(767) {
+				width: 70px;
+				height: 70px;
+			}
+
+			.icon-font {
+				transform: translateX(3px);
+				font-size: 45px;
+				color: #e2c88e;
+				@include adaptive(1279) {
+					font-size: 40px;
+				}
+				@include adaptive(767) {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		position: relative;
+		transform: translateY(-50%);
+		@include adaptive(1023) {
+			transform: unset;
+			margin-top: 30px;
+		}
+		@include adaptive(767) {
+			margin-top: 0;
+		}
+	}
+}
+
+// SECTION :: END

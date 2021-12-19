@@ -1,57 +1,90 @@
 // BUTTON :: START
 
-// ==================================================
-// ==================================================
-// ==================================================
-
-$bth-width: 250px;
-$bth-height: 45px;
-$btn-border-width: 1px;
-$btn-border-color: rgba(#000, 1);
-$bth-border-radius: 5px;
-$bth-box-shadow: none;
-$bth-background-color: rgba(#000, 1);
-$bth-color: rgba(#fff, 1);
-$bth-font-size: rgba(#000, 1);
-$bth-font-weight: bold;
-
-$btn-color--border: rgba(#000, 1);
-
-// ==================================================
-// ==================================================
-// ==================================================
-
 .c-btn {
   outline: none;
   cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: $bth-width;
-  height: $bth-height;
-  border: $btn-border-width solid $btn-border-color;
-  box-shadow: $bth-box-shadow;
-  border-radius: $bth-border-radius;
-  color: $bth-color;
-  font-size: $bth-font-size;
-  font-weight: $bth-font-weight;
-
-  &--border {
-    background-color: transparent;
-    color: $btn-color--border;
+  width: auto;
+  min-width: 208px;
+  height: 130px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background-color: #602b51;
+  @include transition(transform, background-color);
+  @include adaptive(1279) {
+    height: 110px;
+  }
+  @include adaptive(767) {
+    height: 90px;
   }
 
-  &--bg {
-    background-color: $bth-background-color;
+  &:hover {
+    transform: translateY(-3px);
+    background-color: #dec895;
+    @include transition(transform, background-color);
+
+    &:before,
+    &:after {
+      background-color: #602b51;
+      transform: translateY(-50%) scaleY(2);
+      @include transition(background-color, transform);
+    }
+
+    span {
+      color: #602b51;
+      @include transition(color);
+    }
   }
 
-  &__text {
-    &-wrap {}
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &--center {
+      justify-content: center;
+    }
   }
 
-  &__icon {
-    &-wrap {}
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 30px;
+    background-color: #dec895;
+    transform-origin: center;
+    @include transition(background-color, transform);
+  }
+
+  &:before {
+    left: 20px;
+  }
+
+  &:after {
+    right: 20px;
+  }
+
+  span {
+    z-index: 2;
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #e2c88e;
+    @include transition(color);
+    @include adaptive(767) {
+      font-size: 14px;
+    }
   }
 }
 
