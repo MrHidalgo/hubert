@@ -1,0 +1,44 @@
+// SECTION :: START
+
+.schedule {
+	position: relative;
+	padding-top: 220px;
+	padding-bottom: 220px;
+	background-image: url('../img/img-schedule-bg@2x.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include adaptive(1439) {
+		padding-top: 180px;
+		padding-bottom: 180px;
+	}
+	@include adaptive(1023) {
+		padding-top: 125px;
+		padding-bottom: 125px;
+	}
+	@include adaptive(767) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, 0.8);
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+	}
+
+	&__title {
+		padding-bottom: 55px;
+	}
+}
+
+// SECTION :: END

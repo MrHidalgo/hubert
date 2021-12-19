@@ -1414,3 +1414,60 @@ picture {
     margin-top: 0;
   }
 }
+
+/* line 3, src/scss/_components/common/schedule.scss */
+.schedule {
+  position: relative;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  background-image: url("../img/img-schedule-bg@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1439px) {
+  /* line 3, src/scss/_components/common/schedule.scss */
+  .schedule {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/common/schedule.scss */
+  .schedule {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/common/schedule.scss */
+  .schedule {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/* line 24, src/scss/_components/common/schedule.scss */
+.schedule:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 34, src/scss/_components/common/schedule.scss */
+.schedule__wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 39, src/scss/_components/common/schedule.scss */
+.schedule__title {
+  padding-bottom: 55px;
+}
