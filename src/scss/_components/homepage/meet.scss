@@ -1,0 +1,123 @@
+// SECTION :: START
+
+.meet {
+	padding-top: 150px;
+	padding-bottom: 400px;
+	@include adaptive(1279) {
+		padding-top: 100px;
+	}
+	@include adaptive(1023) {
+		padding-bottom: 150px;
+	}
+	@include adaptive(767) {
+		padding-top: 50px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__title {
+		position: absolute;
+		top: 0;
+		padding: 15px 90px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #ffffff;
+		text-transform: unset;
+		transform: translateY(-50%);
+		@include adaptive(1279) {
+			position: relative;
+			padding: 0 0 50px 0;
+			transform: unset;
+		}
+	}
+
+	&__visual {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__block {
+		z-index: 5;
+		position: absolute;
+		bottom: 0;
+		transform: translateY(50%);
+		display: flex;
+		@include adaptive(1023) {
+			position: relative;
+			transform: translateY(-100px);
+		}
+		@include adaptive(767) {
+		  transform: unset;
+			padding-top: 50px;
+			width: calc(100% + 40px);
+		}
+
+		> div {
+			position: relative;
+			width: 100%;
+			max-width: 691px;
+			padding: 60px 35px 0 35px;
+			box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.1);
+			background-image: url('../img/img-pattern@2x.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			@include adaptive(767) {
+				padding: 50px 25px;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(#fff, 0.85);
+				background-image: url('../img/logo-icon.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+
+	&__content {
+		z-index: 2;
+		position: relative;
+	}
+
+	&__subtitle {
+		text-transform: none;
+	}
+
+	&__label {
+		padding-bottom: 40px;
+		@include adaptive(767) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__desc {
+		text-align: center;
+		@include adaptive(767) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__btn {
+		transform: translateY(50%);
+		@include adaptive(767) {
+			transform: unset;
+		}
+	}
+}
+
+// SECTION :: END
