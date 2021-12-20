@@ -2,7 +2,7 @@
 @import "_utilities/*.scss";
 
 /// VENDOR
-//@import "_vendor/hamburger/_hamburgers";
+@import "_vendor/hamburger/_hamburgers";
 
 /// GENERATED
 @import "_generated/spriteFont";
@@ -35,3 +35,5 @@
 @import "_components/common/reviews";
 @import "_components/common/schedule";
 @import "_components/common/media";
+
+@import "_components/homepage/main";

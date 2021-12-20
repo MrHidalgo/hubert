@@ -8,6 +8,8 @@ extends shared/_layout
 block content
   div.body(class!= pageClassName)
 
+    include components/homepage/main
+
     include components/common/real
     include components/common/traveling
     include components/common/reviews

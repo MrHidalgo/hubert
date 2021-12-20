@@ -3,5 +3,24 @@
 header#header.header
   .c-grid
     .header__wrapper
+      .header__wrapper-left
+
+        a.header__phone(href='tel:8042854115') 804.285.4115
+
+        nav.header__social
+          a(href="#")
+            i.icon-font.icon-facebook
+          a(href="#")
+            i.icon-font.icon-instagram
+
+      .header__wrapper-middle
+
+        .logo.logo--header
+          a.logo__btn(href="#")
+            img.logo__img(src="img/logo.svg" alt="")
+
+      .header__wrapper-right
+
+        +hamburger()
 
 // HEADER :: END
