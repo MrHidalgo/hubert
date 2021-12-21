@@ -1,0 +1,19 @@
+---
+title: Darrin Hubert | Body
+
+pageClassName: p-body
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +submainSection('img-submain-body', ['HOME', '•', 'body'], 'body')
+
+    include components/body/method
+
+    include components/common/real
+    include components/common/traveling
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/media

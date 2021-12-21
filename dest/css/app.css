@@ -3032,6 +3032,7 @@ picture {
   text-transform: none;
 }
 .method__wrapper-3 {
+  padding-bottom: 50px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;

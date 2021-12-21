@@ -9,7 +9,13 @@ PageList:
   ready: 90
 - file: face.html
   titleName: Face
-  ready: 1
+  ready: 90
+- file: breast.html
+  titleName: Breast
+  ready: 90
+- file: body.html
+  titleName: Body
+  ready: 90
 - file: contacts.html
   titleName: Contacts
   ready: 1
