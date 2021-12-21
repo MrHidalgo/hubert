@@ -1,0 +1,120 @@
+// SECTION :: START
+
+.gallery {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include adaptive(767) {
+		padding-top: 50px;
+		padding-bottom: 0;
+	}
+
+	&__wrapper {
+		padding-bottom: 85px;
+		@include adaptive(767) {
+			padding-bottom: 35px;
+		}
+	}
+
+	&__title {
+		text-transform: none;
+	}
+
+	&__subtitle {
+		text-align: left;
+	}
+
+	&__label {
+		padding-bottom: 50px;
+		text-align: left;
+	}
+
+	&__box {
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 495px;
+		@include adaptive(1365) {
+			height: 455px;
+		}
+		@include adaptive(1279) {
+			height: 425px;
+		}
+		@include adaptive(767) {
+			height: 350px;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+				@include transition(transform 0.45s);
+			}
+
+			p {
+				color: #fff;
+				@include transition(color);
+			}
+		}
+
+		&:after {
+			content: '';
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(#602B51, 0.8);
+		}
+
+		img {
+			z-index: 0;
+			@extend %imageResCoverAbs;
+			transform-origin: center;
+			@include transition(transform 0.4s);
+		}
+
+		p {
+			z-index: 5;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			padding: 40px;
+			text-align: left;
+			@include transition(color);
+			@include adaptive(1279) {
+				padding: 20px;
+				font-size: 30px;
+				line-height: 40px;
+			}
+			@include adaptive(1023) {
+				font-size: 30px;
+				line-height: 40px;
+			}
+		}
+
+		&-wrapper {
+			position: relative;
+			left: -15px;
+			display: flex;
+			flex-wrap: wrap;
+			width: calc(100% + 15px);
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 3);
+				padding-left: 15px;
+				padding-bottom: 15px;
+				@include adaptive(1023) {
+					max-width: calc(100% / 2);
+				}
+				@include adaptive(767) {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// SECTION :: END

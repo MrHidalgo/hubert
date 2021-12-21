@@ -16,6 +16,9 @@ PageList:
 - file: body.html
   titleName: Body
   ready: 90
+- file: gallery.html
+  titleName: Gallery
+  ready: 90
 - file: contacts.html
   titleName: Contacts
   ready: 1

@@ -1,0 +1,18 @@
+---
+title: Darrin Hubert | Gallery
+
+pageClassName: p-gallery
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +submainSection('img-submain-gallery', ['HOME', '•', 'gallery'], 'Gallery')
+
+    include components/gallery/gallery
+
+    include components/common/traveling
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/media
