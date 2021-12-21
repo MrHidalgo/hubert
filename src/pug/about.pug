@@ -1,0 +1,16 @@
+---
+title: Darrin Hubert | About
+
+pageClassName: p-about
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +submainSection('img-submain-about', ['HOME', '•', 'ABOUT'], 'About Dr. Hubert', 'As a diplomate of the American Board of Plastic Surgery, Dr. Hubert is a board-certified plastic surgeon. He has served as the chief of plastic surgery at CJW Medical Center on Richmond’s south side of the James River since 2016.')
+
+    include components/common/traveling
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/media

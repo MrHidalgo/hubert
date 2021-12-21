@@ -15,7 +15,7 @@ const buildCB = (cb) => {
     'scss',
     'js',
     'pug',
-    // 'list-pages'
+    'list-pages'
   )(cb);
 };
 

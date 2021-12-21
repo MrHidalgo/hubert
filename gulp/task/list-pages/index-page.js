@@ -1,7 +1,5 @@
 'use strict';
 
-const { promises: fs } = require("fs");
-
 const { task, src, dest, watch, series } = require('gulp');
 
 const consolidate = require('gulp-consolidate'),
@@ -9,20 +7,26 @@ const consolidate = require('gulp-consolidate'),
 
 const configPath  = require('../../config/configPath');
 
-const listPageCB = () => {
+task('list-pages', (cb) => {
   // delete require.cache[require.resolve('../../../src/index.yaml')];
   
-  return src(__dirname + '/listPages.html')
+  let pages = require('../../../src/index.yaml');
+  
+  console.log(__dirname + '/listPages.html');
+  console.log(pages);
+  for(let k of pages) {
+    console.log(k);
+  }
+  
+  src(__dirname + '/listPages.html')
     .pipe(consolidate('lodash', {
-      pages: '../../../src/index.yaml'
+      pages: pages
     }))
     .pipe(dest(configPath.dest.root));
-};
-
-
-task('list-pages', (cb) => {
-  listPageCB();
-  cb();
+  
+  return cb();
 });
 
-task('list-pages:watch', (cb) => watch('src/index.yaml', listPageCB));
+task('list-pages:watch', function() {
+  watch('src/index.yaml', ['list-pages']);
+});

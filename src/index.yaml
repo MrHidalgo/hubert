@@ -3,7 +3,7 @@ ProjectTitle: Darrin Hubert
 PageList:
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 90
 - file: about.html
   titleName: About
   ready: 1
