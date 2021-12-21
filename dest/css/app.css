@@ -4,7 +4,7 @@
   margin-left: auto;
 }
 
-.main__bg > img, .submain__bg img {
+.awards__bg img, .main__bg > img, .submain__bg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2656,4 +2656,102 @@ picture {
 }
 .about__desc:not(:last-child) {
   padding-bottom: 50px;
+}
+
+.awards {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .awards {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.awards__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #602b51;
+}
+.awards__bg img {
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+.awards__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .awards__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.awards__wrapper-left, .awards__wrapper-right {
+  width: 50%;
+}
+@media screen and (max-width: 1023px) {
+  .awards__wrapper-left, .awards__wrapper-right {
+    width: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .awards__wrapper-left, .awards__wrapper-right {
+    width: 100%;
+  }
+}
+.awards__wrapper-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 1023px) {
+  .awards__wrapper-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .awards__wrapper-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    padding-top: 50px;
+  }
+}
+.awards__wrapper-right img {
+  display: block;
+  max-width: 150px;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1023px) {
+  .awards__wrapper-right img {
+    margin: 20px;
+  }
+}
+.awards__title {
+  padding-bottom: 50px;
+  text-align: left;
+  text-transform: none;
+}
+.awards__desc {
+  color: #ffffff;
 }
