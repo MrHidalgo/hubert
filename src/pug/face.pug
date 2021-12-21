@@ -1,0 +1,19 @@
+---
+title: Darrin Hubert | Face
+
+pageClassName: p-face
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +submainSection('img-submain-face', ['HOME', '•', 'Face'], 'FACE')
+
+    include components/face/method
+
+    include components/common/real
+    include components/common/traveling
+    include components/common/reviews
+    include components/common/schedule
+    include components/common/media

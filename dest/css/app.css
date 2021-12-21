@@ -4,7 +4,7 @@
   margin-left: auto;
 }
 
-.awards__bg img, .main__bg > img, .submain__bg img {
+.method__block-bg > img:nth-of-type(1), .awards__bg img, .main__bg > img, .submain__bg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2945,4 +2945,243 @@ picture {
   .we .media__box {
     height: 185px;
   }
+}
+
+.method {
+  padding-top: 150px;
+}
+@media screen and (max-width: 1023px) {
+  .method {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .method {
+    padding-top: 50px;
+  }
+}
+.method__wrapper {
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 1023px) {
+  .method__wrapper {
+    padding-bottom: 100px;
+  }
+  .method__wrapper:last-of-type {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .method__wrapper {
+    padding-bottom: 50px;
+  }
+}
+.method__wrapper-1, .method__wrapper-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1023px) {
+  .method__wrapper-1, .method__wrapper-3 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.method__wrapper-1 .method__wrapper-left, .method__wrapper-1 .method__wrapper-right, .method__wrapper-3 .method__wrapper-left, .method__wrapper-3 .method__wrapper-right {
+  width: 50%;
+}
+@media screen and (max-width: 1023px) {
+  .method__wrapper-1 .method__wrapper-left, .method__wrapper-1 .method__wrapper-right, .method__wrapper-3 .method__wrapper-left, .method__wrapper-3 .method__wrapper-right {
+    width: 100%;
+  }
+}
+.method__wrapper-1 .method__wrapper-left, .method__wrapper-3 .method__wrapper-left {
+  padding-right: 15px;
+}
+@media screen and (max-width: 1023px) {
+  .method__wrapper-1 .method__wrapper-left, .method__wrapper-3 .method__wrapper-left {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+}
+.method__wrapper-1 .method__wrapper-right, .method__wrapper-3 .method__wrapper-right {
+  padding-left: 15px;
+}
+@media screen and (max-width: 1023px) {
+  .method__wrapper-1 .method__wrapper-right, .method__wrapper-3 .method__wrapper-right {
+    padding-left: 0;
+  }
+}
+.method__wrapper-1 .method__wrapper-right img, .method__wrapper-3 .method__wrapper-right img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1023px) {
+  .method__wrapper-1 .method__wrapper-right img, .method__wrapper-3 .method__wrapper-right img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.method__wrapper-1 .method__title, .method__wrapper-3 .method__title {
+  padding-bottom: 50px;
+  text-align: left;
+  text-transform: none;
+}
+.method__wrapper-3 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.method__block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+.method__block-bg {
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #602b51;
+}
+.method__block-bg > img:nth-of-type(1) {
+  z-index: 1;
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+.method__block-bg > img:nth-of-type(2) {
+  z-index: 2;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right center;
+     object-position: right center;
+}
+.method__block-wrapper {
+  position: relative;
+  left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 15px);
+}
+.method__block-wrapper > div {
+  width: 100%;
+  max-width: 33.3333333333%;
+  padding-left: 15px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 1023px) {
+  .method__block-wrapper > div {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .method__block-wrapper > div {
+    max-width: 100%;
+  }
+}
+.method__block-content {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 225px;
+  padding: 50px 35px 0 35px;
+}
+@media screen and (max-width: 1279px) {
+  .method__block-content {
+    min-height: unset;
+    padding: 35px 20px 0 20px;
+  }
+}
+.method__block p {
+  text-align: left;
+  font-size: 30px;
+}
+@media screen and (max-width: 1279px) {
+  .method__block p {
+    min-height: 110px;
+    margin-bottom: 25px;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .method__block p {
+    min-height: 90px;
+    font-size: 22px;
+  }
+}
+.method__block .c-btn {
+  height: 60px;
+  background-color: #dec895;
+}
+.method__block .c-btn__wrapper {
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+.method__block .c-btn:after, .method__block .c-btn:before {
+  background-color: #602b51;
+}
+.method__block .c-btn span {
+  color: #602b51;
+}
+.method__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 73px;
+  padding: 25px 30px;
+  background-color: #602b51;
+}
+.method__box p {
+  font-family: "IvyPresto Display", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #e2c88e;
+}
+.method__box-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.method__box-wrapper > div:not(:last-of-type) {
+  padding-bottom: 10px;
 }

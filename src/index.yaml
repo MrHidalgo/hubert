@@ -6,6 +6,9 @@ PageList:
   ready: 90
 - file: about.html
   titleName: About
+  ready: 90
+- file: face.html
+  titleName: Face
   ready: 1
 - file: contacts.html
   titleName: Contacts
