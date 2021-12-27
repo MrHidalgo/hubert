@@ -30,17 +30,23 @@
 	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == facebook {
+	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == instagram {
+	@if $filename == corner {
 		$char: "\E003";
 	}
-	@if $filename == play {
+	@if $filename == facebook {
 		$char: "\E004";
 	}
-	@if $filename == quote {
+	@if $filename == instagram {
 		$char: "\E005";
+	}
+	@if $filename == play {
+		$char: "\E006";
+	}
+	@if $filename == quote {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -59,6 +65,14 @@
 
 .icon-arrow {
 	@include icon(arrow);
+
+}
+.icon-close {
+	@include icon(close);
+
+}
+.icon-corner {
+	@include icon(corner);
 
 }
 .icon-facebook {

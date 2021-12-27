@@ -12,12 +12,6 @@ task('list-pages', (cb) => {
   
   let pages = require('../../../src/index.yaml');
   
-  console.log(__dirname + '/listPages.html');
-  console.log(pages);
-  for(let k of pages) {
-    console.log(k);
-  }
-  
   src(__dirname + '/listPages.html')
     .pipe(consolidate('lodash', {
       pages: pages
