@@ -1,0 +1,16 @@
+---
+title: Darrin Hubert | Contact
+
+pageClassName: p-contact
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +submainSection('img-submain-contact', ['HOME', '•', 'contact'], 'Contact', '')
+
+    include components/contact/contact
+
+    include components/common/traveling
+    include components/common/reviews
