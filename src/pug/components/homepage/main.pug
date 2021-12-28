@@ -5,14 +5,14 @@ section#main.main
   .main__bg
     img(src="img/img-main-bg.jpg" srcset='img/img-main-bg@2x.jpg 2x' alt="")
     .main__bg-logo
-      img(src="img/logo-icon-big.svg" alt="")
-    
+      img(src="img/logo-icon-big.svg" alt="" parallax-js data-stellar-ratio="0.9")
+
   .c-grid
     .main__wrapper
 
-      h1.main__title.c-title.c-title--big!= "Choose <br>the right surgeon <br>for you."
+      h1.main__title.c-title.c-title--big.wow.animate__animated.animate__fadeInUp!= "Choose <br>the right surgeon <br>for you."
 
-      .main__btn.c-btn__wrapper.c-btn__wrapper--center
+      .main__btn.c-btn__wrapper.c-btn__wrapper--center.wow.animate__animated.animate__fadeInUp
         a.c-btn(href="#")
           span!= "LEARN <br>MORE"
           p

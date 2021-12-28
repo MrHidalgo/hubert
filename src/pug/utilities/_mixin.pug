@@ -13,17 +13,17 @@ mixin submainSection(imgName, breadcrumbsArr, title, desc)
 			.submain__wrapper
 				.submain__wrapper-left
 
-					.submain__breadcrumbs
+					.submain__breadcrumbs.wow.animate__animated.animate__fadeInUp
 						each val, idx in breadcrumbsArr
 							if(idx === breadcrumbsArr.length - 1)
 								p!= val
 							else
 								a(href="#")!= val
 
-					h1.submain__title.c-title.c-title--gold!= title
+					h1.submain__title.c-title.c-title--gold.wow.animate__animated.animate__fadeInUp!= title
 
 					if(desc)
-						p.submain__desc.c-desc!= desc
+						p.submain__desc.c-desc.wow.animate__animated.animate__fadeInUp!= desc
 
 				.submain__wrapper-right
 
