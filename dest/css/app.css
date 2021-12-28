@@ -1909,6 +1909,33 @@ picture {
     padding-bottom: 50px;
   }
 }
+.real.real--facelift {
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .real.real--facelift {
+    padding-bottom: 50px;
+  }
+}
+.real.real--facelift .real__wrapper-middle > div {
+  padding: 60px 50px;
+}
+@media screen and (max-width: 1439px) {
+  .real.real--facelift .real__wrapper-middle > div {
+    padding: 35px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .real.real--facelift .real__wrapper-middle > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .real.real--facelift .real__wrapper-middle > div {
+    padding: 20px;
+  }
+}
 .real__wrapper {
   position: relative;
   display: -webkit-box;
