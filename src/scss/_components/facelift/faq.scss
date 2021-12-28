@@ -1,0 +1,126 @@
+// SECTION :: START
+
+.faq {
+  transform: translateY(-100px);
+  @include adaptive(1439) {
+    transform: translateY(-50px);
+    padding-bottom: 25px;
+  }
+  @include adaptive(1023) {
+    transform: unset;
+    padding-bottom: 85px;
+  }
+  @include adaptive(767) {
+    padding-top: 50px;
+  }
+
+  &__wrapper {
+    &:not(:last-of-type) {
+      padding-bottom: 100px;
+      @include adaptive(1439) {
+        padding-bottom: 75px;
+      }
+      @include adaptive(767) {
+        padding-bottom: 35px;
+      }
+    }
+  }
+
+  &__title {
+    & + .c-label {
+      padding-top: 10px;
+    }
+  }
+
+  &__block {
+    &-wrapper {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 50px;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 30px) / 2);
+        padding-bottom: 15px;
+        @include adaptive(1023) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__collapse {
+    display: flex;
+    flex-direction: column;
+
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 73px;
+      padding: 20px 30px;
+      background-color: #602b51;
+      @include adaptive(767) {
+        min-height: unset;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      &.is-active {
+        .icon-font {
+          transform: rotate(45deg);
+          @include transition(transform);
+        }
+      }
+
+      p {
+        padding-right: 30px;
+        font-family: "IvyPresto Display", 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        color: #e2c88e;
+        @include adaptive(767) {
+          padding-right: 15px;
+        }
+      }
+
+      .icon-font {
+        font-size: 18px;
+        color: #e2c88e;
+        transform-origin: center;
+        @include transition(transform);
+        @include adaptive(767) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-body {
+      display: none;
+      background-color: #602b51;
+
+      > div {
+        padding: 15px 30px 30px;
+        @include adaptive(767) {
+          padding: 15px;
+        }
+
+        p {
+          font-size: 16px;
+          letter-spacing: 0.02em;
+          line-height: 36px;
+          color: #fff;
+          @include adaptive(767) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

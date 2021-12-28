@@ -1,0 +1,48 @@
+// SECTION :: START
+mixin faqCollapse(title, desc)
+  .faq__collapse
+    a.faq__collapse-head(href="#")
+      div
+        p!= title
+      div
+        i.icon-font.icon-plus
+    .faq__collapse-body
+      div
+        p!= desc
+
+section#faq.faq
+  .c-grid
+    .faq__wrapper.faq__wrapper-1
+
+      h2.faq__title.c-title.c-title--small Facelift FAQs
+      p.faq__label.c-label Your Facelift Questions Answered
+
+      .faq__block-wrapper
+        div
+          +faqCollapse('What’s the best age to get a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('How long do the results of a facelift last?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('How long does it take to look normal after a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('Can other procedures be performed at the same time as a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('Are their scars after getting a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('Why choose Dr. Hubert?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+
+    .faq__wrapper.faq__wrapper-2
+
+      h2.faq__title.c-title.c-title--small Post-Op FAQs
+
+      .faq__block-wrapper
+        div
+          +faqCollapse('What’s the best age to get a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('How long do the results of a facelift last?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('How long does it take to look normal after a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+        div
+          +faqCollapse('Can other procedures be performed at the same time as a facelift?', 'Dr. Hubert is a compassionate surgeon with hundreds if not thousands of surgeries under his belt. He’s a member of the American Society of Plastic Surgeons, a Board Certified Plastic Surgeon, and has been a Richmond Top Doc for multiple years. Most importantly, Dr. Hubert has compassion for his patients and is an expert in the anatomy of the face.')
+
+// SECTION :: END

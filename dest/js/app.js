@@ -98,6 +98,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
 /* harmony import */ var _macros_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/menu */ "./src/js/macros/menu.js");
 /* harmony import */ var _macros_headerFixed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/headerFixed */ "./src/js/macros/headerFixed.js");
+/* harmony import */ var _macros_faq__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/faq */ "./src/js/macros/faq.js");
+
 
 
  // EVENT LISTENER - LOAD
@@ -109,6 +111,7 @@ window.addEventListener('load', function (ev) {
 
   _macros_menu__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _macros_headerFixed__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+  _macros_faq__WEBPACK_IMPORTED_MODULE_3__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
@@ -149,6 +152,32 @@ var Common = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (Common);
+
+/***/ }),
+
+/***/ "./src/js/macros/faq.js":
+/*!******************************!*\
+  !*** ./src/js/macros/faq.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var Faq = function () {
+  var init = function init() {
+    $('.faq__collapse-head').on('click', function (ev) {
+      $(ev.currentTarget).toggleClass('is-active');
+      $(ev.currentTarget).siblings('.faq__collapse-body').slideToggle(350);
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Faq);
 
 /***/ }),
 
