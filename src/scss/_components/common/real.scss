@@ -38,6 +38,55 @@
     }
   }
 
+  &.real--recovery {
+    padding-bottom: 100px;
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
+
+    .real {
+      &__wrapper {
+        &-left,
+        &-right {
+          max-width: 560px;
+          @include adaptive(1535) {
+            max-width: 455px;
+          }
+          @include adaptive(1439) {
+            max-width: 425px;
+          }
+          @include adaptive(1279) {
+            max-width: 300px;
+          }
+          @include adaptive(1023) {
+            max-width: 50%;
+          }
+        }
+
+        &-middle {
+          > div {
+            padding: 60px 50px;
+            @include adaptive(1439) {
+              padding: 35px;
+            }
+            @include adaptive(1279) {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+            @include adaptive(767) {
+              padding: 20px;
+            }
+          }
+        }
+      }
+
+      &__title {
+        padding-bottom: 50px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
 	&__wrapper {
 		position: relative;
 		display: flex;
